@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Intro</title>
+</head>
+
+<body>
+    <!-- A comment in HTML -->
+
+    <!-- Headings in HTML5 -->
+    <h1>Heading one</h1>
+    <h2>Heading two</h2>
+    <h3>Heading three</h3>
+    <h4>Heading four</h4>
+    <h5>Heading five</h5>
+    <h6>Heading six</h6>
+    <!-- /Headings -->
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Inline display versus block display -->
+
+    <!-- Paragraphs -->
+    <p>Lorem, <strong>ipsum dolor sit amet consectetur adipisicing elit.</strong> Eligendi, repellendus!</p>
+    <p>Lorem <em>ipsum dolor sit amet consectetur</em> adipisicing elit. Odio numquam maxime tempora, suscipit ad quos
+        praesentium odit, magni consequatur ea placeat ipsum! Ea esse saepe veniam labore voluptate amet rem.</p>
+    <!-- /Paragraphs -->
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Links -->
+    <a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a>
+    <a href="semantic.html">Go to semantic</a>
+    <!-- /Links -->
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Meaningless(non-semantic) nodes: div and span -->
+    <div>
+        Some content
+    </div>
+    <div>
+        Some other content
+    </div>
+    <div>
+        <p title="tooltip for p">A paragraph</p>
+        <span>
+            Left side
+        </span>
+        <span>
+            Right side
+        </span>
+    </div>
+    <!-- /Meaningless(non-semantic) nodes: div and span -->
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Lists -->
+    <figure>
+        <figcaption>Fruits:</figcaption>
+        <ul>
+            <li>Apple</li>
+            <li>Peach</li>
+            <li>Orange</li>
+        </ul>
+    </figure>
+
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ol>
+    <!-- /Lists -->
+
+    <!-- Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alex</td>
+                <td>alex@ase.ro</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>ana@ase.ro</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Alina</td>
+                <td>alina@ase.ro</td>
+                <td>36</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- /Table -->
+    <br>
+    <br>
+    <!-- Forms -->
+    <form action="" method="POST">
+        <fieldset>
+            <legend>Personal details</legend>
+            <div>
+                <label>First name</label>
+                <input type="text" name="firstName" placeholder="Enter first name">
+            </div>
+            <div>
+                <label>Age</label>
+                0<input type="range" name="age" value="26">100
+            </div>
+            <div>
+                <label>Height</label>
+                <input type="number" name="height" value="180">
+            </div>
+            <div>
+                <label>Birthday</label>
+                <input type="date" name="bd">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+        </fieldset>
+        <div>
+            <label>Gender</label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label>Programming languages</label>
+            <input type="radio" name="pl" value="python">python
+            <input type="radio" name="pl" value="java">java
+            <input type="radio" name="pl" value="golang">golang
+        </div>
+        <fieldset>
+            <legend>Contact info</legend>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label>Message</label>
+                <textarea name="message"></textarea>
+            </div>
+        </fieldset>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    <!-- /Forms -->
+
+    <!-- Buttons -->
+    <button>Click</button>
+    <!-- /Buttons -->
+
+    <!-- Images -->
+    <figure>
+        <img width="600" alt="Landscape photo" src="images/wallpaper.jpg">
+        <figcaption>Fig.1 Landscape</figcaption>
+    </figure>
+    <!-- /Images -->
+</body>
+
+</html>

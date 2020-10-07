@@ -1,0 +1,29 @@
+/* CSS Introduction - selectors 
+
+selector { 
+    property1: value1;
+    property2: value2;
+ }
+*/
+
+/* simple selectors */
+
+/* element selector */
+a {
+    color: green;
+}
+
+/* class selector */
+.nav_a {
+    color: tomato;
+}
+
+/* id selector */
+#video_a_id {
+    color: #bb4477
+}
+
+/* grouping selector */
+h4, h5, p {
+    color: rgb(255,190,0);
+}

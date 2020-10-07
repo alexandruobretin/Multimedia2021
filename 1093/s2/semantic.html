@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+    CSS priority order:
+    1. Inline CSS
+    2. External and internal CSS
+    3. Browser default
+-->
+<head>
+    <title>Semantic HTML</title>
+    <meta name="author" content="1093">
+    <meta name="description" content="semantic html5 example">
+    <meta name="keywords" content="teaching, HMTL5, multimedia">
+    <link rel="stylesheet" href="style.css"> <!-- external CSS -->
+    <!-- <link rel="stylesheet" href="second_style.css"> external CSS -->
+    <style>
+        /* 
+            A CSS comment written within an internal CSS
+        */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Semantic elements</h2>
+    </header>
+    <nav>
+        <a class="nav_a" href="#">Audio</a>
+        <a id="video_a_id" href="#">Video</a>
+        <a class="nav_a" href="#">Article</a>
+        <a href="#">Iframe</a>
+    </nav>
+    <div style="display:flex;"> <!-- inline CSS -->
+        <aside>
+            <div><a href="#">Audio</a></div>
+            <div><a href="#">Video</a></div>
+            <div><a href="#">Article</a></div>
+            <div><a href="#">Iframe</a></div>
+            <div><a href="../s1/index.html">Go to Index page</a></div>
+        </aside>
+        <main>
+            <!-- audio -->
+            <section>
+                <h4>Audio tag</h4>
+                <audio controls>
+                    <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_OOG_1MG.ogg"
+                        type="audio/ogg">
+                    Your browser does not support HTML audio.
+                </audio>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <!-- video -->
+            <section>
+                <h4>Video tag</h4>
+                <video controls>
+                    <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+                        type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <!-- article -->
+            <section>
+                <h4>Article tag</h4>
+                <article>
+                    <h5>Some h5</h5>
+                    <small>Posted on Wednesday</small>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ipsa rem quod autem tenetur,
+                        beatae molestias voluptas modi illum repudiandae.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ipsa rem quod autem tenetur,
+                        beatae molestias voluptas modi illum repudiandae.</p>
+                </article>
+                <hr>
+                <article>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, at.
+                </article>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <!-- iframe -->
+            <section>
+                <h4>Iframe tag</h4>
+                <iframe width="720" height="480" src="https://www.youtube.com/embed/-yE986s2mfM"></iframe>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        It ain't much, but it's honest work!
+    </footer>
+</body>
+
+</html>

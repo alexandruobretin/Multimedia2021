@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semantic HTML5</title>
+    <meta name="author" content="1094">
+    <meta name="description" content="Semantic HTML examples">
+    <meta name="keywords" content="HTML5, multimedia, teaching">
+    <link href="style.css" rel="stylesheet"> <!-- external -->
+    <!-- 3 ways of declaring CSS: 
+        external - separate file
+        internal - dedicated tag inside <head></head> 
+        inline - using the style attribute at HTML node level
+
+        Priority of CSS:
+        1. Inline style
+        2. External and internal 
+        3. Browser default
+
+        For the 2. the css that would be considered is the last one declared
+    -->
+    <style>
+        /* here goes some css code in internal declaration */ 
+        main {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Semantic elements in HTML5</h2>
+    </header>
+
+    <nav>
+        <a href="#">Audio</a>
+        <a href="#">Video</a>
+        <a href="#">Article</a>
+        <a href="#iframe">IFrame</a>
+    </nav>
+
+    <main style="display: flex;"> <!-- inline example -->
+        <aside>
+            <h6>Site map</h6>
+            <div><a href="#" class="custom_a">Audio</a></div>
+            <div><a href="#" class="custom_a">Video</a></div>
+            <div><a href="#" class="custom_c">Article</a></div>
+            <div><a href="#iframe">IFrame</a></div>
+        </aside>
+        <div>
+            <!-- Audio -->
+            <section>
+                <h4>Audio tag</h4>
+                <audio controls>
+                    <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_OOG_1MG.ogg"
+                        type="audio/ogg">
+                    Your browser does not support audio.
+                </audio>
+            </section>
+
+            <!-- Video -->
+            <section>
+                <h4>Video tag</h4>
+                <video controls>
+                    <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+                        type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </section>
+
+            <!-- Article -->
+            <section>
+                <h4>Article tag</h4>
+                <hr>
+                <article>
+                    <h5>My first experience with HTML</h5>
+                    <small>Posted on Friday</small>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis libero laborum nesciunt
+                        exercitationem eos quam quaerat minus modi, dignissimos corporis!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, optio.</p>
+                </article>
+                <hr>
+                <article>
+                    <h5>My first experience with CSS</h5>
+                    <small>Posted on Sunday</small>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis libero laborum nesciunt
+                        exercitationem eos quam quaerat minus modi, dignissimos corporis!</p>
+                </article>
+                <hr>
+            </section>
+
+            <!-- Iframe -->
+            <section id="iframe">
+                <h4>Iframe tag</h4>
+                <iframe width="600" height="400" src="https://www.youtube.com/embed/-yE986s2mfM"></iframe>
+                <iframe src="https://www.ase.ro/"></iframe>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        It ain't much, but it's honest work.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+/* CSS Introduction - selectors 
+
+Structure of a selector in CSS:
+    selector { 
+        property1: value1;
+        property2: value2;
+    }
+*/
+
+/* simple selectors */
+
+/* element (HTML element) selector
+    p {
+        color: green;
+    } 
+*/
+
+/* class selector */
+.blue {
+    color: blue;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* id selector */
+/* #first_p {
+    color: #bb4477
+} */
+
+/* grouping selector */
+h4, h5 {
+    color: rgb(255,190,0);
+}
+
+/* combinator selector: child and descendent */
+/* child and attribute selector */
+div[class="child_div"] > p {
+    color: cyan;
+}
+
+/* descendent */
+.descendent_div p{
+    color: tomato;
+}
+
+/*  pseudo-class selectors 
+    Some rules to remember:
+    hover should be declared after the link and visited
+    active should be declared after hover
+*/
+a:link{
+    color: #F00
+}
+
+a:visited{
+    color: royalblue;
+}
+
+a:hover{
+    color: darkgreen;
+}
+
+a:active{
+    color: cyan;
+}
+
+/* pseudo-element selectors */
+h4::before{
+    background-image: url(https://i.pinimg.com/originals/04/41/ea/0441ea5619b979bde781aa040943c208.gif);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    content: "";
+    display: inline-block;
+}
+
+h4::after{
+    background-image: url(https://i.pinimg.com/originals/df/ea/dd/dfeaddf703acf71277dbb1d6d81479b0.gif);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    content: "";
+    display: inline-block;
+}
+
+/*  CSS Units 
+    default font size is 16px
+*/
+#container{
+    height: 600px;
+    font-size: 30px;
+}
+
+.unit_div{
+    border: 1px solid black;
+}
+
+/* .first{
+    background-color: red;
+    height: 50px;
+}
+.second{
+    background-color: blue;
+    height: 50vh;
+} */
+
+.first{
+    background-color: red;
+    height: 2em;
+}
+.second{
+    background-color: blue;
+    height: 2rem;
+}
+
+/*  Box model */
+#box1{
+    width:100px;
+    height: 100px;
+    background-color: salmon;
+    /* padding-left: 15px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    padding: 15px 20px 30px 40px;
+    border: 5px solid greenyellow;
+    border-width: 10px;
+    border-color: black;
+    border-style: dotted;
+    /* border-bottom: 3px solid red; */
+    margin: 50px;
+    display: inline-block;
+}
+
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    display: inline-block;
+}
+
+/* CSS positioning */

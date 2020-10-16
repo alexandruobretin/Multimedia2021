@@ -1,0 +1,122 @@
+/* CSS Introduction - selectors */
+
+/* 
+    selector { 
+        property1: value1;
+        property2: value2;
+    }
+*/
+
+/* simple selectors */
+/* p {
+    color: green;
+} */
+
+:root {
+    /* var declaration */
+    --bg-color: red
+}
+
+#red_p {
+    color: var(--bg-color);
+}
+
+.blue {
+    color: rgba(0, 0, 255, 0.5);
+}
+
+/* grouping selector */
+h4, h5 {
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* combinator selectors: child and descendent*/
+/* child selector + attribute selector */
+div[class="child_div"] > p {
+    color:  cyan;
+}
+
+div > p {
+    color:  var(--bg-color);
+}
+
+/* descendent */
+span p {
+    color: var(--bg-color);
+}
+
+/* pseudo-class selectors */
+/*
+    Some rules to remember:
+    hover should be declared after link and visited
+    active should be declared after hover
+*/
+a:link{
+    color: var(--bg-color);
+}
+
+a:visited{ 
+    color: green;
+}
+
+a:hover {
+    color:cyan;
+}
+
+a:active{
+    color: darkorchid;
+}
+
+/* pseudo-attribute selectors */
+h4::before{
+    background-image: url(https://media.giphy.com/media/LW5vBvAb48Oe9OoEKT/giphy.gif);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    content: "";
+    display: inline-block;
+}
+
+h4::after{
+    background-color: deeppink;
+    content: "some after content";
+}
+
+/* CSS Units and Box model */ 
+/* default font size is 16px */
+#container{
+    height: 600px;
+    background-color: gold;
+    font-size: 24px;
+}
+
+.unit_div {
+    border: 1px dashed black;
+}
+
+.first {
+    background-color: indianred;
+    height: 50px;
+    width:20px;
+    font-size: 2em;
+    padding: 10px 5px 40px 30px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    margin: 2%;
+    margin-bottom: 50px;
+    border-bottom: 2px solid red;
+    border-style: double;
+    border-width: 4px;
+    border-color: indigo;
+}
+
+.second {
+    background-color: plum;
+    height: 50vh;
+    font-size: 2rem;
+}
+
+

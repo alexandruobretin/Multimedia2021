@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Introduction</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        div > p {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS selectors -->
+    <p class="blue">Lorem ipsum dolor sit amet.</p>
+    <p id="red_p">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="blue" style="color:black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, illo!</p>
+    <span class="blue">Lorem, ipsum dolor.</span>
+    <span class="blue">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+    <h4>H4</h4>
+    <h5>H5</h5>
+    <div class="child_div">
+        <p>P1</p>
+        <p>P2</p>
+        <span>
+            <p>P3</p>
+        </span>
+    </div>
+    <div>
+        <p>P1</p>
+        <p>P2</p>
+        <span>
+            <p>P3</p>
+        </span>
+    </div>
+    <span>
+        <p>P1</p>
+        <p>P2</p>
+        <div>
+            <p>P3</p>
+        </div>
+        <div>
+            <span>
+                <div>
+                    <p>P4</p>
+                </div>
+            </span>
+        </div>
+    </span>
+
+    <a href="#">Lemon</a>
+    <a href="#">Peach</a>
+    <a href="#">Orange</a>
+    <!-- /CSS selectors -->
+
+    <!-- CSS Units and Box model-->
+    <div id="container">
+        <div class="unit_div first">first</div>
+        <div class="unit_div second">second</div>
+    </div>
+    <!-- /CSS Units -->
+</body>
+</html>

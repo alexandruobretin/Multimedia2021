@@ -15,9 +15,19 @@ Structure of a selector in CSS:
     } 
 */
 
+/* CSS variables */
+:root {
+    --color: red; /* global scope variable */
+}
+
 /* class selector */
 .blue {
     color: blue;
+}
+
+.red {
+    /* color: red; */
+    color: var(--color);
 }
 
 .bold {
@@ -31,7 +41,10 @@ Structure of a selector in CSS:
 
 /* grouping selector */
 h4, h5 {
-    color: rgb(255,190,0);
+    /* color: rgb(255,0,0); */
+    --color: green; /* local scope variable */
+    color: var(--color);
+
 }
 
 /* combinator selector: child and descendent */
@@ -51,7 +64,8 @@ div[class="child_div"] > p {
     active should be declared after hover
 */
 a:link{
-    color: #F00
+    /* color: #F00 */
+    color: var(--color);
 }
 
 a:visited{
@@ -140,5 +154,3 @@ h4::after{
     background-color: yellow;
     display: inline-block;
 }
-
-/* CSS positioning */

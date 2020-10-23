@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="parent">
+                <div class="child1">One</div>
+                <div class="child2">Two</div>
+                <div class="child3">Three</div>
+                <div class="child4">Four</div>
+                <div class="child5">Five</div>
+            </div>
+
+            <div id="div1"></div>
+            <div id="div2"></div>
+            <!-- <div>
+                <div class="">One</div>
+                <div class="">Two</div>
+                <div class="">Three</div>
+                <div class="">Four</div>
+                <div class="">Five</div>
+            </div> -->
+        </main>
+        <script>
+            function intro(){
+                console.log("Entering intro function")
+
+                // numbers and strings
+                var x = 5 
+                var y = 2
+
+                console.log("x is: ", x)
+                console.log("type of x is: ", typeof x)
+                console.log("y is: ", y)
+                console.log("typeof y is: ", typeof (y))
+                console.log("x + y is: ", x+y)
+                console.log("typeof x+y is: ", typeof (x+y))
+
+                var w = "some string"
+                console.log("w is: ", w)
+                console.log("typeof w is: ", typeof w)
+                console.log("x + w is: ", x+w)
+                console.log("typeof x+w is: ", typeof (x+w))
+
+                var a = 4;
+                var b = 4.0;
+                var c = "4";
+
+                console.log("a == b: ", a == b)
+                console.log("a === b: ", a === b)
+                console.log("a == c: ", a == c)
+                console.log("a === c: ", a === c)
+                console.log("c == b: ", c == b)
+                console.log("c === b: ", c === b)
+                console.log("type of null: ", typeof null)
+                console.log("type of undefined: ", typeof undefined)
+            }
+
+            intro();
+        </script>
+    </body>
+</html>

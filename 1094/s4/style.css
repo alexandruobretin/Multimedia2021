@@ -1,0 +1,157 @@
+/* CSS positioning 
+
+.parent{
+    position: relative;
+}
+
+.child1{
+    background: red;
+    position: relative;
+    top: 10px;
+    left: 10px; 
+}
+
+.child2{
+    background: royalblue;
+    position: absolute;
+    top: 20px;
+}
+
+.child3{
+    background: limegreen;
+}
+
+.child4{
+    background: orange;
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+}
+
+.child5{
+    background: darkcyan;
+}
+
+*/
+
+/* CSS flexbox 
+
+in flexbox there are 2 axis 
+    - main
+    - cross
+
+* {
+    margin:0;
+    padding:0;
+}
+
+.parent{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-flow: column wrap; 
+}
+
+.child1{
+    background: red;
+    order: 5;
+    width: 60px;
+}
+
+.child2{
+    background: royalblue;
+    width: 60px;
+}
+
+.child3{
+    background: limegreen;
+    order: 4;
+    flex: 1 1 30px; 
+}
+
+.child4{
+    background: orange;
+    order: 1;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+.child5{
+    background: darkcyan;
+    flex-grow: 1;
+}
+
+*/
+
+
+/* CSS grid */
+* {
+    margin:0;
+    padding:0;
+}
+
+.parent{
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    /* justify-items: center;
+    align-items: center; */
+    grid-template-areas: 
+    "c1 c1"
+    "c3 ."
+    "c3 c4"
+    ". c4"
+    "c2 c5";
+}
+
+.child1{
+    background: red;
+    grid-area: c1;
+    /* grid-column: 1/3;
+    grid-row: 1/2; */
+}
+
+.child2{
+    background: royalblue;
+    grid-area: c2;
+}
+
+.child3{
+    background: limegreen;
+    grid-area: c3;
+}
+
+.child4{
+    background: orange;
+    grid-area: c4;
+    /* grid-row: 2/4; */
+}
+
+.child5{
+    background: darkcyan;
+    grid-area: c5;
+}
+
+#div1{
+    width:300px;
+    height:100px;
+    border:5px solid black;
+    box-sizing: border-box;
+}
+
+#div2{
+    width:300px;
+    height:100px;
+    padding: 50px;
+    border:5px solid red;
+    box-sizing: border-box;
+}
+
+/* width + padding + border = actual width
+height + padding + border = actual height */

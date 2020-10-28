@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+#front_wheel,
+#back_wheel {
+    animation: wheel 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#biker{
+    animation: biker 2s infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes biker{
+    from{
+        transform: translate(0vh, 0vh);
+    }
+    to{
+        transform: translate(0vh, -0.8vh);
+    }
+}
+
+#hat{
+    animation: hat 2s alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes hat{
+    from{
+        transform: translateY(0%) rotate(0deg);
+    }
+    to{
+        transform: translateY(-20%) rotate(10deg);
+    }
+}
+
+div{
+    animation: loading 5s infinite;
+}
+
+@keyframes loading{
+    0%{
+        width:0%;
+        border-bottom: 3px solid lightcoral;
+    }
+    25%{
+        width:25%;
+        border-bottom: 3px solid palevioletred;
+    }
+    50%{
+        width:50%;
+        border-bottom: 3px solid paleturquoise;
+    }
+    75%{
+        width:75%;
+        border-bottom: 3px solid lightseagreen;
+    }
+    100%{
+        width:100%;
+        border-bottom: 3px solid seagreen;
+    }
+}

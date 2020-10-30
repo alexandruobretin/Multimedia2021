@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+svg{
+    width: 20%;
+}
+
+#front_wheel, 
+#back_wheel{
+    animation: wheel 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#rider{
+    animation: rider 2s alternate infinite;
+    transform-origin: initial;
+}
+
+@keyframes rider{
+    from{
+        transform: translate(0vh, 0vh);
+    }
+    to{
+        transform: translate(0vh, -0.8vh);
+    }
+}
+
+#hat{
+    animation: hat 2s infinite alternate ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes hat{
+    from{
+        transform: translateY(0%) rotate(0deg);
+    }
+    to{
+        transform: translateY(-20%) rotate(6deg);
+    }
+}
+
+div{
+    animation: grow 5s infinite;
+
+}
+
+
+@keyframes grow{
+    0%{
+        width: 0%;
+    }
+    25%{
+        width: 25%;
+        border-bottom: 3px solid lightcoral;
+    }
+    50%{
+        width: 50%;
+        border-bottom: 3px solid palevioletred;
+    }
+    75%{
+        width: 75%;
+        border-bottom: 3px solid lightseagreen;
+    }
+    100%{
+        width: 100%;
+        border-bottom: 3px solid teal;
+    }
+}

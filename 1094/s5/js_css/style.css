@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+}
+
+.container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    min-height: 80vh;
+    width: 35rem;
+    padding: 0rem 5rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+    transform-style: preserve-3d;
+}
+
+.car{
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.75s ease-out;
+}
+
+.car img{
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circle{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, lightcoral, lightseagreen);
+    position: absolute;
+    z-index: 1;
+}
+
+.info h1{
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    transition: all 0.75s ease-out;
+}
+
+.info h3{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem 0rem;
+    font-weight: lighter;
+    color: lightslategray;
+    transition: all 0.75s ease-out;
+}
+
+.models{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+
+.models button{
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-weight: bold;
+    color: lightslategray;
+}
+
+button.active{
+    background: lightslategray;
+    color: white;
+    transition: all 0.75s ease-out;
+}
+
+.purchase button{
+    width:100%;
+    padding: 1rem 0rem;
+    margin-top: 1rem;
+    background-color: crimson;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 30px;
+    transition: all 0.75s ease-out;
+}

@@ -1,6 +1,8 @@
 ---
 ### [Google Drive lab recordings](https://drive.google.com/drive/folders/1zwnfYLS_9492s7pc29W67c2HsqZ-GX-W?usp=sharing)
 ---
+### [Google Drive shared resources](https://drive.google.com/drive/u/1/folders/1OHCTb9g0e-TXQkPKdRpWZGbfmBxWqQ02)
+---
 ### Meetings
 
 | Group | Details |

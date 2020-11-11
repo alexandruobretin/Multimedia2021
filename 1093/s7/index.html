@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Drag and drop lab</title>
+        <style>
+            body{
+                margin:0;
+                background: black;
+                color: white;
+                overflow-x: hidden;
+            }
+
+            #container{
+                border: 1px solid white;
+                border-radius: 33px;
+                margin: 5vh;
+                text-align: center;
+            }
+
+            #first, #second, #third{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .word{
+                padding: 2vh;
+                border: 2px solid white;
+            }
+
+            .answer{
+                border: 2px solid white;
+                min-width: inherit;
+                min-height: 10vh;
+                margin: 5vh;
+                padding-top: 5vh;
+            }
+
+            button{
+                margin-bottom: 5vh;
+                min-width: 50vh;
+                min-height: 10vh;
+            }
+
+            canvas{
+                border: 1px solid white;
+                margin: 5vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>Put the quotes in correct order</p>
+            <!-- The purpose of our lives is to be happy -->
+            <div id="first">
+                <div class="word" order="2" quizz="1">purpose</div>
+                <div class="word" order="5" quizz="1">lives</div>
+                <div class="word" order="1" quizz="1">The</div>
+                <div class="word" order="3" quizz="1">of</div>
+                <div class="word" order="6" quizz="1">is</div>
+                <div class="word" order="9" quizz="1">happy</div>
+                <div class="word" order="4" quizz="1">our</div>
+                <div class="word" order="8" quizz="1">be</div>
+                <div class="word" order="7" quizz="1">to</div>
+            </div>
+            <div class="answer"></div>
+            <hr>
+            <!-- Whoever is happy will make others happy too -->
+            <div id="second">
+                <div class="word" order="7" quizz="2">happy</div>
+                <div class="word" order="3" quizz="2">happy</div>
+                <div class="word" order="5" quizz="2">make</div>
+                <div class="word" order="8" quizz="2">too</div>
+                <div class="word" order="1" quizz="2">Whoever</div>
+                <div class="word" order="4" quizz="2">will</div>
+                <div class="word" order="6" quizz="2">others</div>
+                <div class="word" order="2" quizz="2">is</div>
+            </div>
+            <div class="answer"></div>
+            <hr>
+            <!-- You become what you believe -->
+            <div id="third">
+                <div class="word" order="3" quizz="3">what</div>
+                <div class="word" order="2" quizz="3">become</div>
+                <div class="word" order="5" quizz="3">believe</div>
+                <div class="word" order="4" quizz="3">you</div>
+                <div class="word" order="1" quizz="3">You</div>
+            </div>
+            <div class="answer"></div>
+            <hr>   
+            <p>Move image from one canvas to the other</p>
+            <canvas id="left" draggable="true" ondragstart="dragCanvas(event)" ondrop="dropCanvas(event)" ondragover="allowDrop(event)"></canvas>
+            <canvas id="right" draggable="true" ondragstart="dragCanvas(event)" ondrop="dropCanvas(event)" ondragover="allowDrop(event)"></canvas>
+            <br>
+            <button onclick="save()">Save</button>
+            <br>
+            <button onclick="grayscale()">Apply filter</button>
+            <br>   
+            <br>                  
+        </div>
+        <script>
+            addEventListener('load', () =>{
+                let words = document.getElementsByClassName("word");
+                
+                for(let i=0; i<words.length; i++){
+                    words[i].setAttribute("draggable", "true");
+                    words[i].setAttribute("ondragstart", "dragWord(event)")
+                }
+
+                let answers = document.getElementsByClassName("answer");
+                
+                for(let i=0; i<answers.length; i++){
+                    answers[i].setAttribute("ondragover", "allowDrop(event)");
+                    answers[i].setAttribute("ondrop", "dropWord(event)")
+                }
+            });
+
+            function dragWord(ev){
+                ev.dataTransfer.setData("order", ev.target.attributes.order.value);
+                ev.dataTransfer.setData("quizz", ev.target.attributes.quizz.value);
+
+                ev.dataTransfer.effectAllowed = "move";
+            }
+
+            function allowDrop(ev){
+                ev.preventDefault();
+                ev.dataTransfer.dropEffect = "move";
+            }
+
+            let order_q1 = "";
+            let order_q2 = "";
+            let order_q3 = "";
+            function dropWord(ev){
+                ev.preventDefault();
+
+                var quizz = ev.dataTransfer.getData("quizz");
+                var order = ev.dataTransfer.getData("order");
+
+                if(quizz == 1){
+                    order_q1 += order;
+                }
+                else if (quizz == 2){
+                    order_q2 += order;
+                }
+                else{
+                    order_q3 += order;
+                }
+
+                // .word[quiz="3"][order="1"]
+                let elem = document.querySelector('.word[quizz="' + quizz + '"][order="' + order + '"]');
+                elem.style.opacity = 0.5;
+                elem.style.pointerEvents = "none";
+
+                let node = document.createTextNode(elem.innerText + " ");
+                ev.target.appendChild(node);
+
+                if(order_q1.length == 9){
+                    if(order_q1 == "123456789"){
+                        ev.target.style.background = "darkgreen";
+                    }
+                    else{
+                        ev.target.style.background = "salmon";
+                    }
+                    order_q1 = "";
+                }
+                if(order_q2.length == 8){
+                    if(order_q1 == "12345678"){
+                        ev.target.style.background = "darkgreen";
+                    }
+                    else{
+                        ev.target.style.background = "salmon";
+                    }
+                    order_q2 = "";
+                }
+                if(order_q3.length == 5){
+                    if(order_q3 == "12345"){
+                        ev.target.style.background = "darkgreen";
+                    }
+                    else{
+                        ev.target.style.background = "salmon";
+                    }
+                    order_q3 = "";
+                }                                
+            }
+        
+            // canvas part
+
+            let l_canvas = document.getElementById("left");
+            let r_canvas = document.getElementById("right");
+
+            let l_ctx = l_canvas.getContext("2d");
+            let r_ctx = r_canvas.getContext("2d");
+
+            let img = new Image();
+            img.onload = function(){
+                l_canvas.width = this.width;
+                r_canvas.width = this.width;
+
+                l_canvas.height = this.height;
+                r_canvas.height = this.height;
+
+                l_ctx.drawImage(img, 0, 0, this.naturalWidth, this.naturalHeight);
+            }
+            img.src = "img.jpg"
+
+            function dragCanvas(ev){
+                ev.dataTransfer.setData("id", ev.target.id);
+                ev.dataTransfer.effectAllowed = "move";
+            }
+
+            function dropCanvas(ev){
+                ev.preventDefault();
+
+                let source_id = ev.dataTransfer.getData("id");
+                let src_canvas = document.getElementById(source_id);
+
+                let dest_id = ev.target.id;
+                let dst_canvas = document.getElementById(dest_id);
+
+                let image_source = src_canvas.toDataURL("image/jpg");
+                let image_source_length = image_source.length;
+
+                let copied = new Image();
+                copied.src = image_source;
+
+                dst_canvas.getContext("2d").drawImage(copied, 0, 0);
+
+                let image_dest = dst_canvas.toDataURL("image/jpg");
+                let image_dst_length = image_dest.length;
+
+                if(image_source_length == image_dst_length){
+                    src_canvas.getContext("2d").clearRect(0,0, src_canvas.width, src_canvas.height);
+                }
+            }
+
+            function grayscale(){
+                const image_ = l_ctx.getImageData(0,0, l_canvas.width, l_canvas.height);
+                const data_ = image_.data;
+
+                for(let i=0; i<data_.length; i+=4){
+                    const average = (data_[i] + data_[i+1] + data_[i+2]) / 3;
+                    data_[i] = average;
+                    data_[i+1] = average;
+                    data_[i+2] = average;
+                }
+
+                image_.data = data_;
+                console.log(data_)
+                r_ctx.putImageData(image_, 0, 0);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and drop</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        #container {
+            border: 1px solid white;
+            border-radius: 33px;
+            margin: 5vh;
+            text-align: center;
+        }
+
+        #first,
+        #second,
+        #third {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .word {
+            padding: 2vh;
+            border: 2px solid white;
+        }
+
+        .answer {
+            border: 1px solid white;
+            margin: 5vh;
+            min-height: 10vh;
+            padding-top: 3vh;
+        }
+
+        hr {
+            margin-bottom: 3vh;
+        }
+
+        canvas {
+            border: 1px solid white;
+            margin: 5%;
+        }
+
+        button {
+            min-width: 50vh;
+            min-height: 10vh;
+            margin-bottom: 5vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>Put the quotes in correct order</p>
+        <div id="first">
+            <div class="word" order="2" quizz="1">purpose</div>
+            <div class="word" order="5" quizz="1">lives</div>
+            <div class="word" order="1" quizz="1">The</div>
+            <div class="word" order="3" quizz="1">of</div>
+            <div class="word" order="6" quizz="1">is</div>
+            <div class="word" order="9" quizz="1">happy</div>
+            <div class="word" order="4" quizz="1">our</div>
+            <div class="word" order="8" quizz="1">be</div>
+            <div class="word" order="7" quizz="1">to</div>
+        </div>
+        <div class="answer" quizz="1"></div>
+        <hr>
+        <div id="second">
+            <div class="word" order="3" quizz="2">happy</div>
+            <div class="word" order="7" quizz="2">happy</div>
+            <div class="word" order="5" quizz="2">make</div>
+            <div class="word" order="8" quizz="2">too</div>
+            <div class="word" order="1" quizz="2">Whoever</div>
+            <div class="word" order="4" quizz="2">will</div>
+            <div class="word" order="6" quizz="2">others</div>
+            <div class="word" order="2" quizz="2">is</div>
+        </div>
+        <div class="answer" quizz="2"></div>
+        <hr>
+        <div id="third">
+            <div class="word" order="3" quizz="3">what</div>
+            <div class="word" order="2" quizz="3">become</div>
+            <div class="word" order="5" quizz="3">believe</div>
+            <div class="word" order="4" quizz="3">you</div>
+            <div class="word" order="1" quizz="3">You</div>
+        </div>
+        <div class="answer" quizz="3"></div>
+
+        <br>
+        <br>
+        <p>Move the image from one canvas to the other</p>
+        <div>
+            <canvas id="left" draggable="true" ondragstart="dragCanvas(event)" ondrop="dropCanvas(event)"
+                ondragover="allowDrop(event)"></canvas>
+            <canvas id="right" draggable="true" ondragstart="dragCanvas(event)" ondrop="dropCanvas(event)"
+                ondragover="allowDrop(event)"></canvas>
+        </div>
+        <div>
+            <button onclick="save()">Save</button>
+            <button onclick="grayscale()">Apply filter</button>
+        </div>
+    </div>
+    <script>
+        addEventListener('load', () => {
+            let words = document.getElementsByClassName("word");
+
+            for (let i = 0; i < words.length; i++) {
+                words[i].setAttribute("draggable", "true");
+                words[i].setAttribute("ondragstart", "dragWord(event)");
+            }
+
+            let answers = document.getElementsByClassName("answer");
+
+            for (let i = 0; i < answers.length; i++) {
+                answers[i].setAttribute("ondrop", "dropWord(event)");
+                answers[i].setAttribute("ondragover", "allowDrop(event)");
+            }
+        });
+
+        function dragWord(ev) {
+            // console.log(ev.target, ev.target.attributes, ev.target.attributes.order)
+
+            // when talking about drag - ev.target refers the element that is dragged
+            ev.dataTransfer.setData("order", ev.target.attributes.order.value);
+            ev.dataTransfer.setData("quizz", ev.target.attributes.quizz.value);
+
+            ev.dataTransfer.effectAllowed = "move";
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+            ev.dataTransfer.dropEffect = "move"
+        }
+
+        let order_q1 = "";
+        let order_q2 = "";
+        let order_q3 = "";
+        function dropWord(ev) {
+            ev.preventDefault();
+
+            let quizz_number = ev.target.attributes.quizz.value;
+            let quizz = ev.dataTransfer.getData("quizz");
+            let order = ev.dataTransfer.getData("order");
+
+            if (quizz_number != quizz) {
+                return;
+            }
+
+            if (quizz == 1) {
+                order_q1 += order;
+            }
+            else if (quizz == 2) {
+                order_q2 += order;
+            }
+            else {
+                order_q3 += order;
+            }
+
+            // .word[quizz=1][order=3]
+            let elem = document.querySelector(`.word[quizz="${quizz}"][order="${order}"]`);
+            elem.style.pointerEvents = "none";
+            elem.style.opacity = 0.5;
+
+            let node = document.createTextNode(elem.innerText + " ");
+
+            // when talking about drop - ev.target refers the drop area
+            ev.target.appendChild(node);
+
+            if (order_q1.length == 9) {
+                if (order_q1 == "123456789") {
+                    ev.target.style.background = "darkgreen";
+                }
+                else {
+                    ev.target.style.background = "salmon";
+                }
+                order_q1 = "";
+            }
+
+            if (order_q2.length == 8) {
+                if (order_q2 == "12345678") {
+                    ev.target.style.background = "darkgreen";
+                }
+                else {
+                    ev.target.style.background = "salmon";
+                }
+                order_q2 = "";
+            }
+
+            if (order_q3.length == 5) {
+                if (order_q3 == "12345") {
+                    ev.target.style.background = "darkgreen";
+                }
+                else {
+                    ev.target.style.background = "salmon";
+                }
+                order_q3 = "";
+            }
+        }
+
+        let left_canvas = document.getElementById("left")
+        let l_ctx = left_canvas.getContext("2d")
+        let right_canvas = document.getElementById("right")
+        let r_ctx = right_canvas.getContext("2d")
+
+        let img = new Image()
+        img.onload = function(){
+            left_canvas.width = this.width;
+            left_canvas.height = this.height;
+            right_canvas.width = this.width;
+            right_canvas.height = this.height;
+
+            l_ctx.drawImage(img, 0, 0, this.width, this.height);
+        }
+        img.src = "img.jpg"
+
+        function dragCanvas(ev){
+            ev.dataTransfer.setData("id", ev.target.id);
+            ev.dataTransfer.effectAllowed = "move";
+        }
+
+        function dropCanvas(ev){
+            ev.preventDefault();
+
+            let source_id = ev.dataTransfer.getData("id")
+            let source_canvas = document.getElementById(source_id);
+            let src_ctx = source_canvas.getContext("2d");
+
+            let destination_id = ev.target.id;
+            let destination_canvas = document.getElementById(destination_id);
+            let dest_ctx = destination_canvas.getContext("2d");
+
+            let image_src = source_canvas.toDataURL("image/jpg");
+            let source_img_length = image_src.length;
+
+            var copied = new Image()
+            copied.src = image_src;
+
+            dest_ctx.drawImage(copied, 0, 0);
+
+            let image_dest = destination_canvas.toDataURL("image/jpg");
+            let destination_img_length = image_dest.length;
+
+            if(source_img_length == destination_img_length){
+                src_ctx.clearRect(0,0, source_canvas.width, source_canvas.height);
+            }
+        }
+
+        function grayscale(){
+            let image = l_ctx.getImageData(0, 0, left_canvas.width, left_canvas.height);
+            console.log(image)
+            let image_data = image.data
+            console.log(image_data)
+
+            // rgb(50,50,50)
+            // rgb(200,200,200)
+            for(let i=0; i<image_data.length; i++){
+                let average = (image_data[i] + image_data[i+1] + image_data[i+2]) / 3 
+
+                image_data[i] = average;
+                image_data[i+1] = average;
+                image_data[i+2] = average;
+            }
+
+            image.data = image_data;
+
+            r_ctx.putImageData(image, 0, 0);
+        }
+
+    </script>
+</body>
+
+</html>

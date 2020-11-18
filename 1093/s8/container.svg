@@ -1,0 +1,52 @@
+<svg width="769" height="688" viewBox="0 0 769 688" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="container">
+<g id="player">
+<g id="volume">
+<path id="volume_range" d="M712.836 399.163H681.062V546.13H712.836V399.163Z" fill="#0B780F" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="volume_circle" d="M724.385 399.09C724.403 413.489 712.224 425.163 697.202 425.163C682.18 425.163 670 413.489 670 399.09C670 384.674 682.18 373 697.202 373C712.224 373 724.403 384.674 724.385 399.09Z" fill="#F51111" stroke="black" stroke-width="3.74998" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="disk">
+<path id="path2817" d="M620.451 356.533C620.472 527.523 481.787 666.155 310.686 666.155C139.608 666.155 0.92046 527.523 0.941592 356.533C0.922574 185.543 139.608 46.9107 310.686 46.9107C481.787 46.9107 620.472 185.543 620.451 356.533Z" fill="black"/>
+<path id="path2849" d="M265.077 647.478C189.838 635.69 122.099 595.253 76.0452 534.66L310.686 356.54L265.077 647.478Z" fill="#969696"/>
+<path id="path2847" d="M332.476 62.8703C405.041 68.2477 473.044 100.254 523.397 152.759L310.686 356.54L332.476 62.8703V62.8703Z" fill="#969696"/>
+</g>
+<g id="static">
+<path id="path2818" d="M421.634 356.557C421.641 417.799 371.97 467.452 310.689 467.452C249.416 467.452 199.744 417.799 199.751 356.557C199.745 295.315 249.416 245.662 310.689 245.662C371.97 245.662 421.641 295.315 421.634 356.557Z" fill="white" stroke="black" stroke-width="5.00016" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="path2819" d="M326.787 356.539C326.788 365.425 319.581 372.63 310.688 372.63C301.798 372.63 294.59 365.425 294.591 356.539C294.59 347.652 301.798 340.448 310.688 340.448C319.581 340.448 326.788 347.652 326.787 356.539Z" fill="black"/>
+<path id="path2821" d="M238.73 312.381L302.916 269.089" stroke="black" stroke-width="5"/>
+<path id="path2822" d="M228.284 366.115L356.656 279.53" stroke="black" stroke-width="5"/>
+<path id="path2823" d="M303.703 408.621L367.889 365.328" stroke="black" stroke-width="5"/>
+<path id="path2842" fill-rule="evenodd" clip-rule="evenodd" d="M653.667 91.611L509.332 415.457L391.594 483.088L419.248 527.872L452.236 505.806L492.66 559.11L508.958 549.362L483.162 485.158L542.351 445.591L698.45 113.915L653.667 91.611V91.611Z" fill="#FFA41B" stroke="white" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="rect2864" d="M620.123 24.7703L598.941 71.5464C592.969 84.7347 598.825 100.265 612.02 106.234L687.483 140.37C700.679 146.338 716.217 140.486 722.189 127.298L743.37 80.5215C749.342 67.3332 743.487 51.8032 730.292 45.8343L654.828 11.6984C641.633 5.72952 626.095 11.582 620.123 24.7703Z" fill="#FFA41B" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="g2851">
+<path id="path2852" fill-rule="evenodd" clip-rule="evenodd" d="M658.157 81.6073L593.098 226.919L611.181 298.28L702.86 103.893L658.157 81.6073V81.6073Z" fill="#FFA41B" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="path2854" fill-rule="evenodd" clip-rule="evenodd" d="M599.235 222.744L590.111 245.345L602.31 308.34L613.717 282.742L599.235 222.744V222.744Z" fill="#FFA41B" stroke="black"/>
+</g>
+</g>
+<g id="next">
+<path id="next_circle" d="M767.045 649.539C767.068 668.6 751.605 684.055 732.534 684.055C713.463 684.055 698 668.6 698 649.539C698 630.455 713.463 615 732.534 615C751.605 615 767.068 630.455 767.045 649.539Z" fill="#5660BB" stroke="black" stroke-width="3.75003" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="next_icon">
+<path id="Polygon 1" d="M749 650L734 658.66V641.34L749 650Z" fill="black"/>
+<path id="Polygon 2" d="M737 650L722 658.66V641.34L737 650Z" fill="black"/>
+</g>
+</g>
+<g id="prev">
+<path id="prev_circle" d="M583.045 651.539C583.068 670.6 567.605 686.055 548.534 686.055C529.463 686.055 514 670.6 514 651.539C514 632.455 529.463 617 548.534 617C567.605 617 583.068 632.455 583.045 651.539Z" fill="#FB4141" stroke="black" stroke-width="3.75003" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="prev_icon">
+<path id="Polygon 1_2" d="M533 652L548 643.34V660.66L533 652Z" fill="black"/>
+<path id="Polygon 2_2" d="M545 652L560 643.34V660.66L545 652Z" fill="black"/>
+</g>
+</g>
+<g id="play">
+<path id="play_2" d="M674.887 650.048C674.909 668.287 659.482 683.075 640.455 683.075C621.427 683.075 606 668.287 606 650.048C606 631.788 621.427 617 640.455 617C659.482 617 674.909 631.788 674.887 650.048Z" fill="#FDBE1C" stroke="black" stroke-width="3.74999" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="play_icon">
+<path id="Polygon 2_3" d="M650 650L635 658.661V641.34L650 650Z" fill="black"/>
+</g>
+<g id="pause_icon">
+<line id="Line 1" y1="-3" x2="30.0003" y2="-3" transform="matrix(0.0297176 0.999558 -0.999577 0.0290839 634 635)" stroke="black" stroke-width="6"/>
+<line id="Line 2" y1="-3" x2="30.0003" y2="-3" transform="matrix(0.0297176 0.999558 -0.999577 0.0290839 644.108 635)" stroke="black" stroke-width="6"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

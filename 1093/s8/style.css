@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(120deg, #42275a, #734b6d);
+}
+
+.container{
+    width: 100vw;
+    min-height: 80vh;
+    padding: 10vh 20vw;
+    text-align: center;
+    color:white;
+}
+
+.title{
+    margin-top: 3vh;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2vh;
+}
+
+.loader{
+    width: 80%;
+    height: 2vh;
+    background: #fdfdfd;
+    border-radius: 50px;
+}
+
+.fill{
+    width: 0;
+    height: 2vh;
+    background: #f45c43;
+    border-radius: 50px;
+}
+
+@keyframes disk{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}

@@ -1,0 +1,47 @@
+<svg width="771" height="733" viewBox="0 0 771 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="AJ_simple_turntable 1">
+<g id="container">
+<g id="disk">
+<path id="path2817" d="M624.944 375.694C624.965 540.609 491.307 674.317 326.408 674.317C161.532 674.317 27.8721 540.609 27.8924 375.694C27.8741 210.779 161.532 77.0718 326.408 77.0718C491.307 77.0718 624.965 210.779 624.944 375.694Z" fill="black"/>
+<path id="path2849" d="M282.453 656.303C209.941 644.934 144.658 605.933 100.273 547.493L326.409 375.701L282.453 656.303Z" fill="#969696"/>
+<path id="path2847" d="M347.409 92.4644C417.344 97.6507 482.881 128.52 531.409 179.159L326.409 375.701L347.409 92.4644Z" fill="#969696"/>
+</g>
+<g id="static">
+<path id="path2842" fill-rule="evenodd" clip-rule="evenodd" d="M656.957 120.184L517.853 432.524L404.384 497.754L431.036 540.947L462.827 519.664L501.786 571.074L517.493 561.673L492.633 499.75L549.675 461.588L700.116 141.696L656.957 120.184Z" fill="#FF9C09" stroke="white" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="rect2864" d="M624.628 55.7179L604.215 100.832C598.459 113.552 604.103 128.53 616.819 134.287L689.547 167.21C702.264 172.967 717.239 167.323 722.995 154.603L743.408 109.488C749.164 96.7686 743.52 81.7904 730.803 76.0335L658.076 43.1104C645.359 37.3535 630.384 42.9981 624.628 55.7179Z" fill="#FF9C09" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="path2852" fill-rule="evenodd" clip-rule="evenodd" d="M661.285 110.536L598.582 250.685L616.01 319.51L704.368 132.03L661.285 110.536Z" fill="#FF9C09" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="path2818" d="M433.334 375.717C433.342 434.784 385.471 482.673 326.411 482.673C267.36 482.673 219.488 434.784 219.495 375.717C219.489 316.651 267.36 268.762 326.411 268.762C385.471 268.762 433.342 316.651 433.334 375.717Z" fill="white" stroke="black" stroke-width="5.00016" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="path2821" d="M257.061 333.111L318.92 291.357" stroke="black" stroke-width="5"/>
+<path id="path2822" d="M246.993 384.935L370.712 301.426" stroke="black" stroke-width="5"/>
+<path id="path2823" d="M319.679 425.932L381.538 384.177" stroke="black" stroke-width="5"/>
+<path id="path2819" d="M341.926 375.7C341.927 384.271 334.981 391.22 326.411 391.22C317.842 391.22 310.896 384.271 310.897 375.7C310.896 367.129 317.842 360.18 326.411 360.18C334.981 360.18 341.927 367.129 341.926 375.7Z" fill="black"/>
+</g>
+<g id="next">
+<path id="next_circle" d="M764.542 655.312C764.564 673.696 749.662 688.601 731.282 688.601C712.902 688.601 698 673.696 698 655.312C698 636.905 712.902 622 731.282 622C749.662 622 764.564 636.905 764.542 655.312Z" fill="#3FA3FF" stroke="black" stroke-width="3.75003" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="next_icon">
+<path id="Polygon 1" d="M748 655L733 663.66V646.34L748 655Z" fill="black"/>
+<path id="Polygon 2" d="M734 655L719 663.66V646.34L734 655Z" fill="black"/>
+</g>
+</g>
+<g id="play">
+<path id="play_circle" d="M678.204 656.974C678.226 674.565 663.358 688.827 645.02 688.827C626.683 688.827 611.815 674.565 611.815 656.974C611.815 639.362 626.683 625.1 645.02 625.1C663.358 625.1 678.226 639.362 678.204 656.974Z" fill="#EFBA00" stroke="black" stroke-width="3.74999" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="pause_icon">
+<line id="Line 1" x1="639.5" y1="642" x2="639.5" y2="672" stroke="black" stroke-width="5"/>
+<line id="Line 2" x1="647.5" y1="642" x2="647.5" y2="672" stroke="black" stroke-width="5"/>
+</g>
+<path id="play_icon" d="M657 657.5L638.25 668.325V646.675L657 657.5Z" fill="black"/>
+</g>
+<g id="prev">
+<path id="prev_circle" d="M592.236 658.414C592.258 676.798 577.356 691.703 558.976 691.703C540.595 691.703 525.693 676.798 525.693 658.414C525.693 640.007 540.595 625.102 558.976 625.102C577.356 625.102 592.258 640.007 592.236 658.414Z" fill="#EE4141" stroke="black" stroke-width="3.75003" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="prev_icon">
+<path id="Polygon 1_2" d="M542 658L557 649.34V666.66L542 658Z" fill="black"/>
+<path id="Polygon 2_2" d="M556 658L571 649.34V666.66L556 658Z" fill="black"/>
+</g>
+</g>
+<g id="volume">
+<path id="volume_range" d="M713.981 416.81H683.358V558.556H713.981V416.81Z" fill="#046319" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="volume_circle" d="M725.927 441.888C725.944 455.776 714.206 467.035 699.729 467.035C685.251 467.035 673.513 455.776 673.513 441.888C673.513 427.984 685.251 416.725 699.729 416.725C714.206 416.725 725.944 427.984 725.927 441.888Z" fill="#FF6B00" stroke="black" stroke-width="3.74998" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>

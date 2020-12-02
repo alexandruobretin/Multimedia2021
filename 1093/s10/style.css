@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(246, 102, 102), rgb(131, 131, 236));
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container h1{
+    padding: 10% 0% 5% 0%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.gallery{
+    display: flex;
+    align-items: center;
+}
+
+.collumn{
+    flex-basis: 50%;
+    min-width: 50%;
+    height: 50%;
+}
+
+.large_display{
+    position: relative;
+}
+
+.large_display img{
+    border-radius: 5px;
+    height: 50vh;
+    width: 80%;
+}
+
+.small_display{
+    display: flex;
+    background: #efefef;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+}
+
+.small_image{
+    position: relative;
+}
+
+.small_image img{
+    height: 15vh;
+    border-radius: 5px;
+    margin-bottom: -0.5vh;
+}
+
+p{
+    padding-left: 5%;
+}
+
+.large_display .play_btn{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    width: 80px;
+    height: auto;
+}
+
+.small_display .play_btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: auto;
+}
+
+.video_player{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.close_btn{
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 30px;
+}
+
+.video_filters{
+    position: absolute;
+    bottom: 1%;
+    left: 30%;
+}
+
+button{
+    border: 1px solid white;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: rgb(87, 84, 84);
+    color: white;
+    width: 10vw;
+    height: 5vh;
+}
+
+video:focus{
+    outline: none;
+}

@@ -4,6 +4,7 @@ canvas.height = innerHeight
 
 const c = canvas.getContext("2d")
 const scoreValue = document.querySelector("#scoreValue")
+const highestScoreValue = document.querySelector("#highestScoreValue")
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -107,6 +108,11 @@ const enemies = []
 const particles = []
 let score = 0;
 
+let highest_score = localStorage.getItem('highestScore')
+if(highest_score != null){
+    highestScoreValue.innerHTML = highest_score;
+}
+
 let animationId
 function animate() {
     animationId = requestAnimationFrame(animate);
@@ -130,6 +136,12 @@ function animate() {
         const distance = Math.hypot(player.x - enemy.x, player.y - enemy.y)
         if (distance - player.radius - enemy.radius < 0.5) {
             cancelAnimationFrame(animationId);
+
+            let highest = localStorage.getItem('highestScore');
+            if(highest != null && score > highest){
+                localStorage.setItem('highestScore', score);
+            }
+
             alert(`Game over! Your score is ${score}`)
         }
 

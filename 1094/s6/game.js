@@ -6,6 +6,7 @@ const c = canvas.getContext("2d");
 c.fillRect(0, 0, canvas.width, canvas.height);
 
 const scoreValue = document.querySelector('#scoreValue');
+const highestScoreValue = document.querySelector('#highestScoreValue');
 
 class Player {
     constructor(_x, _y, _radius) {
@@ -111,6 +112,10 @@ const bullets = [];
 const enemies = [];
 const particles = [];
 let score = 0;
+let highest = localStorage.getItem("highestScore")
+if(highest != null){
+    highestScoreValue.innerHTML = highest;
+}
 
 let animationId
 function animate() {
@@ -148,6 +153,12 @@ function animate() {
         const distance = Math.hypot(player.x - enemy.x, player.y - enemy.y);
         if (distance - enemy.radius - player.radius < 0.5) {
             cancelAnimationFrame(animationId);
+
+            let highest_score = localStorage.getItem("highestScore")
+            if(highest_score != null && score > highest_score){
+                localStorage.setItem("highestScore", score);
+            }
+
             alert(`Game over! Your score is: ${score}`)
         }
 
@@ -207,8 +218,7 @@ function spawnEnemies() {
             y = Math.random() < 0.5 ? 0 - radius : canvas.height + radius;
         }
         else {
-            x = Math.random() < 0.5 ? 0 - radius : canvas.width + radius;
-            y = Math.random() * canvas.height;
+            x = Math.random() * canvas.height;
         }
 
         const angle = Math.atan2(canvas.height / 2 - y, canvas.width / 2 - x);

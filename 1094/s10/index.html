@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>video gallery</h1>
+            <div class="gallery">
+                <div class="collumn">
+                    <div class="large_image">
+                        <img src="media/pic1.png">
+                        <img src="media/play.png" class="play_btn" file="vid1.mp4">
+                    </div>
+                </div>
+                <div class="collumn">
+                    <div class="small_display">
+                        <div class="small_image">
+                            <img src="media/pic2.png">
+                            <img src="media/play.png" class="play_btn" file="vid2.mp4">
+                        </div>
+                        <p>The first video in the gallery</p>
+                    </div>
+                    <div class="small_display">
+                        <div class="small_image">
+                            <img src="media/pic3.png">
+                            <img src="media/play.png" class="play_btn" file="vid1.mp4">
+                        </div>
+                        <p>The second video in the gallery</p>
+                    </div>
+                    <div class="small_display">
+                        <div class="small_image">
+                            <img src="media/pic4.png">
+                            <img src="media/play.png" class="play_btn" file="vid2.mp4">
+                        </div>
+                        <p>The third video in the gallery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video_player">
+            <video width="100%" controls autoplay>
+                <source src="media/vid1.mp4" type="video/mp4">
+            </video>
+            <img src="media/close.png" class="close_btn">
+        </div>
+
+        <div class="video_filters">
+            <button id="blackwhite" onclick="blackwhite()">black and white</button>
+            <button id="sepia" onclick="sepia()">sepia</button>
+            <button id="invert" onclick="invert()">invert</button>
+            <button id="nofilter" onclick="nofilter()">no filter</button>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

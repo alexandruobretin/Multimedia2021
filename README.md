@@ -3,6 +3,10 @@
 ---
 ### [Google Drive shared resources](https://drive.google.com/drive/u/1/folders/1OHCTb9g0e-TXQkPKdRpWZGbfmBxWqQ02)
 ---
+### [Projects upload](https://drive.google.com/drive/folders/1mO5b4ybHc7WdV1X7UTdYXDMdqxEySoTt?usp=sharing)
+Note: in case you have a git repository, you can email me the link for that and it's fine. Don't forget to provide me view access in case your repository is private.
+Note 2: the deadline for mid-term submission is Sunday, 13th December, at 23:59
+---
 ### Meetings
 
 | Group | Details |

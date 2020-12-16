@@ -1,0 +1,31 @@
+{
+    "name": "Space invaders",
+    "short_name": "Invaders",
+    "icons": [
+        {
+            "src": "images/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "en-US",
+    "background_color": "white",
+    "theme_color": "white",
+    "display": "standalone",
+    "start_url": "/s12/game.html"
+}

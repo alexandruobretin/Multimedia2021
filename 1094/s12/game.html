@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                overflow: hidden;
+            }
+            #score{
+                position: fixed;
+                color: white;
+                padding-left: 1vw;
+                padding-top: 1vh;
+            }
+            #scoreValue, #highestScoreValue{
+                margin-left: 1vh;
+            }
+        </style>
+
+        <title>Space invaders</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <link rel="manifest" href="manifest.json">
+
+        <link rel="apple-touch-icon" href="images/icon-144x144.png">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+        <meta name="theme-color" content="white">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-title" content="Space invaders">
+
+        <meta name="msapplication-TileImage" content="images/icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+    </head>
+    <body>
+        <div id="score">
+            <span>Score:</span><span id="scoreValue">0</span>
+            <span>Highest:</span><span id="highestScoreValue">0</span>
+        </div>
+        <canvas></canvas>
+        <script src="game.js"></script>
+        <noscript>Your browser does not support Javascript and it is needed for application execution!</noscript>
+    </body>
+</html>
